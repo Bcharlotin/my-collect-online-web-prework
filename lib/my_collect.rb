@@ -1,6 +1,10 @@
 def my_collect(array)
-  language= ["RUBY", "JAVASCRIPT", "PYTHON", "OBJECTIVE-C"]
-  my_collect(language)|x|
-  return x
+  i = 0
+  collection = []
+  while i < array.count
+    collection << yield(array[i])
+    i += 1
+  end
+  collection
 end
 
